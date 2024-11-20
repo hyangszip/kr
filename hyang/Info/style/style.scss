@@ -1,0 +1,330 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Neue Haas Grotesk Display Pro';
+  line-height: normal;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.nav {
+  border-bottom: 1.4px solid whitesmoke;
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
+    font-size: 18px;
+    padding-top: 16px;
+    padding-bottom: 6px;
+    padding-inline: 16px;
+  }
+  a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-size: 18px;
+    font-weight: 500;
+    font-style: oblique;
+  }
+
+  .link {
+    text-decoration: none;
+    color: whitesmoke;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    vertical-align: baseline;
+    p {
+      font-size: 18px;
+      margin: 0%;
+      flex-wrap: wrap;
+    }
+    a {
+      padding-top: 2px;
+      padding-left: 8px;
+    }
+  }
+}
+
+.home::before {
+  content: 'Hyang';
+  text-decoration: none;
+  color: whitesmoke;
+  width: fit-content;
+}
+.home:hover::before {
+  content: 'Hyang';
+  text-decoration: none;
+  color: #646464;
+  width: fit-content;
+}
+.work::before {
+  content: 'Work';
+  text-decoration: none;
+  color: whitesmoke;
+}
+.work:hover::before {
+  content: 'Work';
+  text-decoration: none;
+  color: #646464;
+}
+.work:hover::after {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.info::before {
+  content: 'About';
+  text-decoration: none;
+  color: whitesmoke;
+}
+.info:hover::before {
+  content: 'About';
+  text-decoration: none;
+  color: #646464;
+}
+
+.background {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  img {
+    width: 400px;
+    height: 400px;
+    width: 100%;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+  margin-bottom: 42px;
+
+  .profile {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+  }
+
+  .left {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: 36px;
+    }
+    .profile_img {
+      margin: 0;
+      padding: 0;
+      width: 240px;
+      height: auto;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .right {
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    p {
+      font-weight: 600;
+      margin-block: 32px;
+      margin-right: 4px;
+    }
+    .about_box {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      .about {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .title {
+      margin-top: 36px;
+      margin-bottom: 16px;
+      font-size: 16px;
+      font-weight: 500;
+      color: whitesmoke;
+    }
+    .text {
+      margin: 0;
+      padding: 0;
+      .span_box {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        .p_box {
+          display: flex;
+          flex-direction: column;
+          padding-right: 8px;
+        }
+      }
+      span {
+        font-size: 18px;
+        padding-right: 16px;
+        margin-block: 4px;
+      }
+      .tool {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-flow: row;
+        flex-basis: 3;
+      }
+      p {
+        font-size: 18px;
+        font-weight: 400;
+        margin-block: 4px;
+      }
+    }
+  }
+}
+
+.footer {
+  border-top: 1.4px solid whitesmoke;
+  color: whitesmoke;
+  .footer_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    padding-block: 0;
+    padding-inline: 16px;
+    p {
+      padding-inline: 8px;
+    }
+  }
+}
+
+.capcha_box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  .text_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+  }
+  img {
+    max-width: 240px;
+    max-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    .main {
+      display: flex;
+      max-width: 375px;
+      max-height: fit-content;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 0;
+      gap: 0;
+
+      .profile {
+        display: flex;
+        max-width: 375px;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin: 16px;
+      }
+
+      .left {
+        color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        h1 {
+          text-align: center;
+          font-size: 36px;
+        }
+        .profile_img {
+          margin: 0;
+          padding: 0;
+          width: 240px;
+          height: auto;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .right {
+        color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          font-weight: 600;
+          margin-block: 32px;
+        }
+        .about_box {
+          display: flex;
+          flex-direction: column;
+          .about {
+            display: flex;
+            flex-direction: column;
+          }
+          .about_info {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+        }
+        .title {
+          margin-bottom: 16px;
+          font-size: 18px;
+          font-weight: 500;
+          color: whitesmoke;
+        }
+        .text {
+          margin: 0;
+          padding: 0;
+          margin-bottom: 32px;
+          text-align: left;
+          span {
+            font-size: 18px;
+            padding-right: 16px;
+            margin-bottom: 18px;
+          }
+          .tool {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-flow: column;
+            justify-content: center;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            margin-block: 4px;
+            margin-right: 2px;
+          }
+          .p_box {
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+  }
+}
