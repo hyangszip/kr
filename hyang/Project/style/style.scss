@@ -1,0 +1,249 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Neue Haas Grotesk Display Pro';
+  line-height: normal;
+  overflow-x: hidden;
+  background-color: rgb(17, 17, 17);
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav {
+  border-bottom: 1.4px solid whitesmoke;
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
+    font-size: 18px;
+    padding-top: 16px;
+    padding-bottom: 6px;
+    padding-inline: 16px;
+  }
+  a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-size: 18px;
+    font-weight: 500;
+    font-style: oblique;
+  }
+
+  img {
+    padding: 0;
+  }
+
+  .link {
+    text-decoration: none;
+    color: whitesmoke;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    vertical-align: baseline;
+    p {
+      font-size: 18px;
+      margin: 0%;
+      flex-wrap: wrap;
+    }
+    a {
+      padding-top: 2px;
+      padding-left: 8px;
+    }
+  }
+}
+
+.home::before {
+  content: 'Hyang';
+  text-decoration: none;
+  color: whitesmoke;
+  width: fit-content;
+}
+.home:hover::before {
+  content: 'Hyang';
+  text-decoration: none;
+  color: #646464;
+  width: fit-content;
+}
+.work::before {
+  content: 'Work';
+  text-decoration: none;
+  color: whitesmoke;
+}
+.work:hover::before {
+  content: 'Work';
+  text-decoration: none;
+  color: #646464;
+}
+.work:hover::after {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.info::before {
+  content: 'About';
+  text-decoration: none;
+  color: whitesmoke;
+}
+.info:hover::before {
+  content: 'About';
+  text-decoration: none;
+  color: #646464;
+}
+
+.project_container {
+  max-width: 2560px;
+  height: fit-content;
+  margin-top: 8px;
+  margin-bottom: 80px;
+  margin-inline: 160px;
+  padding-inline: 18px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 24px;
+  padding-top: 10px;
+  .project_contents {
+    display: grid;
+    flex-direction: column;
+    width: fit-content;
+    height: auto;
+    gap: 10px;
+    .text_container {
+      .category_box {
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        padding-bottom: 10px;
+        .category {
+          color: whitesmoke;
+          width: fit-content;
+          border: 1.4px solid whitesmoke;
+          border-radius: 32px;
+          padding-inline: 8px;
+        }
+      }
+      .text_title {
+        color: whitesmoke;
+        font-size: 18px;
+        margin-block: 4px;
+        line-height: 132%;
+        font-weight: 500;
+        span {
+          font-weight: 400;
+          color: whitesmoke;
+          opacity: 48%;
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}
+
+.img {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  padding: 6px;
+}
+
+video {
+  max-width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.project_contents_section :hover {
+  color: darkgray;
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.footer {
+  border-top: 1.4px solid whitesmoke;
+  color: whitesmoke;
+  .footer_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    padding-block: 0;
+    padding-inline: 16px;
+    p {
+      padding-inline: 8px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    .nav {
+      margin-bottom: 14px;
+      .nav_container {
+        display: flex;
+        justify-content: space-between;
+        margin-block: 4px;
+        margin-inline: 12px;
+        font-size: 20px;
+        font-weight: 400;
+        padding-top: 12px;
+        padding-bottom: 2px;
+        padding-inline: 16px;
+        align-items: center;
+      }
+    }
+
+    img {
+      max-height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    display: flex;
+    flex-direction: column;
+    .project_container {
+      display: flex;
+      max-width: 375px;
+      max-height: fit-content;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 0;
+      padding-inline: 24px;
+      padding-bottom: 16px;
+      gap: 24px;
+    }
+  }
+
+  .footer {
+    border-top: 1.4px solid whitesmoke;
+    color: whitesmoke;
+    margin-top: 14px;
+    .footer_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-inline: 16px;
+      font-size: 14px;
+      font-weight: 500;
+      padding-block: 0;
+      padding-inline: 16px;
+      p {
+        padding-inline: 8px;
+      }
+    }
+  }
+}
